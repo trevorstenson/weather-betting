@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_29_045011) do
+ActiveRecord::Schema.define(version: 2020_04_29_194405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,12 @@ ActiveRecord::Schema.define(version: 2020_04_29_045011) do
     t.date "date"
     t.integer "high"
     t.integer "low"
-    t.integer "over_points"
-    t.integer "under_points"
+    t.integer "over_high_points"
+    t.integer "under_high_points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "over_low_points"
+    t.integer "under_low_points"
   end
 
   create_table "users", force: :cascade do |t|
