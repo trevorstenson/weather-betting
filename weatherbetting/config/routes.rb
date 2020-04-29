@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :temperature_bets
+
   scope '/auth' do
     devise_for :users,
               path: '',

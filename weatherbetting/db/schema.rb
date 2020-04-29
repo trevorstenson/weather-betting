@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_28_014314) do
+ActiveRecord::Schema.define(version: 2020_04_29_045011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "temperature_bets", force: :cascade do |t|
+    t.string "location"
+    t.date "date"
+    t.integer "high"
+    t.integer "low"
+    t.integer "over_points"
+    t.integer "under_points"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_014314) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "points"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

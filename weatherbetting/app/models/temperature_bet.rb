@@ -1,0 +1,2 @@
+class TemperatureBet < ApplicationRecord
+end
