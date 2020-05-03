@@ -1,17 +1,7 @@
 Rails.application.routes.draw do
   resources :temperature_bets
-
-  scope '/auth' do
-    devise_for :users,
-              path: '',
-              path_names: {
-                sign_in: 'login',
-                sign_out: 'logout',
-                registration: 'signup'
-              },
-              controllers: {
-                sessions: 'sessions',
-                registrations: 'registrations'
-              }
-    end
+  post  '/temperature_bets/submit', to: 'temperature_bets#submit'
+  resources :users
+  post '/auth/login', to: 'authentication#login'
+  get '/*a', to: 'application#not_found'
 end
