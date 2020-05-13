@@ -2,7 +2,6 @@ class TemperatureBet < ApplicationRecord
     def apply_wager(amount, bet_type)
         case bet_type
         when 1
-            # overhigh
             self.over_high_points += amount
         when 2
             self.under_high_points += amount

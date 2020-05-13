@@ -19,6 +19,10 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 5.seconds do
-    puts "whoa"
+set :environment, "development"
+env :PATH, ENV['PATH']
+
+# this is utc time. 1pm = 9am EST
+every 1.day, :at => '1pm' do
+    rake "weather:daily_weather"
 end
