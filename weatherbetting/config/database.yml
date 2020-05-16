@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: weatherbetting_production
-  username: postgres
+  database: weatherbettingproduction
+  username: weatherbettingadmin
   password: testpw
