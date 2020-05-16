@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   resources :temperature_bets
   post  '/temperature_bets/submit', to: 'temperature_bets#submit'
   resources :users

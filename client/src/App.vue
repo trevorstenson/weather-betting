@@ -1,22 +1,21 @@
 <template>
   <div id="app">
-    <Sidenav/>
-    <LoginButton/>
+    <Navbar/>
     <router-view/>
   </div>
 </template>
 
 <script>
-//import Navbar from './components/Navbar'
-import Sidenav from './components/Sidenav'
-import LoginButton from './components/LoginButton'
+import Navbar from './components/Navbar'
+// import Sidenav from './components/Sidenav'
+// import LoginButton from './components/LoginButton'
 
 export default {
   name: 'App',
   components: {
-    Sidenav, 
-    LoginButton
-
+    // Sidenav, 
+    // LoginButton,
+    Navbar
   }
 }
 </script>

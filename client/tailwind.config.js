@@ -7,7 +7,8 @@ module.exports = {
       neutral: '#efefef',
       aqua: '#008f95',
       mustard: '#e9bf00',
-      palm: '#cda34f'
+      palm: '#cda34f',
+      dark: '#2c3e50'
     }
   }
 }

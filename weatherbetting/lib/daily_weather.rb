@@ -5,7 +5,7 @@ class DailyWeather
     @@locations = { "Boston, MA" => ["TOP", "70,76"], "Seattle, WA" => ["SEW", "124,67"], "Los Angeles, CA" => ["LOX", "154,44"] }
 
     def self.get_weather
-        tomorrow = Date.today + 1
+        tomorrow = Time.now.utc.to_date + 1
         if !TemperatureBet.exists?(date: tomorrow)
             @@locations.each do |key, value|
                 weather_json = get_data(value)

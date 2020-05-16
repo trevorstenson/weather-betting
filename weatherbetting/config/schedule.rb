@@ -23,6 +23,11 @@ set :environment, "development"
 env :PATH, ENV['PATH']
 
 # this is utc time. 1pm = 9am EST
-every 1.day, :at => '1pm' do
+# every 1.day, :at => '1pm' do
+every 1.hour do
     rake "weather:daily_weather"
+end
+
+every 15.minutes do
+    rake "wagers:resolve_wagers"
 end
