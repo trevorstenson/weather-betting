@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: weatherbetting_production
-  username: weatherbetting
-  password: <%= ENV['WEATHERBETTING_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: testpw
